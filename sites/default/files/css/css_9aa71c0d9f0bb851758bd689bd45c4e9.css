@@ -67,7 +67,9 @@ h1, h2, h3, h4, h5 {
 }
 h2.title {
   font-size: 1.3em;
-  margin-top: 0.3em;
+  margin-top: 1.2em;
+  padding-top: 0.8em;
+  border-top: 1px solid #e8e8e8;
 }
 #site-name, #site-name a:link, #site-name a:visited {
   font-weight: 600;

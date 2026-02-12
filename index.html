@@ -24,11 +24,12 @@
       #logo-title { border-bottom: 1px solid #DEDEDE; }
       #site-name { font-size: 1.5em !important; }
       #content-area { padding-left: 12px !important; padding-right: 12px !important; }
-      .content img[align="right"] {
-        float: none !important;
-        display: block !important;
-        margin: 0 auto 1em auto !important;
-        max-width: 35% !important;
+      .hero {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-photo {
+        width: 35% !important;
       }
       .node-inner { font-size: 12pt !important; }
       /* Switch from float layout to flexbox */
@@ -118,11 +119,23 @@
   
   <div class="content">
     <style>
-img {
+.hero {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.hero-photo {
     border-radius: 20px;
-    margin: 3%;
-    max-width:16%;
-    margin-top: 1%;
+    width: 160px;
+    flex-shrink: 0;
+}
+.hero-info {
+    flex: 1;
+}
+.hero-info > p:first-child {
+    margin-top: 0;
 }
 .theme-cards {
     display: grid;
@@ -154,19 +167,23 @@ img {
     background: #3080CB;
     color: #fff;
 }
-</style><p>
-<img src="siva2.jpg"  align="right" /></p>
+</style>
+<div class="hero">
+<img src="siva2.jpg" class="hero-photo" />
+<div class="hero-info">
 <p><b>Assistant Professor</b><br />
 <a href="https://mcgill-nlp.github.io/">McGill NLP Group</a><br/>
-<a href="https://mila.quebec/en/">Mila -- Quebec Artificial Intelligence Institute<a><br />
+<a href="https://mila.quebec/en/">Mila -- Quebec Artificial Intelligence Institute</a><br />
 <a href="https://www.cs.mcgill.ca">School of Computer Science, McGill University</a><br />
 <a href="https://www.mcgill.ca/linguistics/">Department of Linguistics, McGill University</a><br />
-<a href="https://www.servicenow.com/research/people.html">Researcher at ServiceNow Research</a></a></a></a></p>
+<a href="https://www.servicenow.com/research/people.html">Researcher at ServiceNow Research</a></p>
 <div class="quick-links">
 <a href="cv_siva.pdf" class="pill">CV</a>
 <a href="http://scholar.google.com/citations?user=LZZAAtoAAAAJ&amp;hl=en" class="pill">Google Scholar</a>
 <a href="http://twitter.com/sivareddyg" class="pill">Twitter</a>
 <a href="https://github.com/sivareddyg" class="pill">Github</a>
+</div>
+</div>
 </div>
 <div align="justify">
 I am an Assistant Professor in the School of Computer Science and Linguistics at McGill University, a Canada CIFAR AI Chair, a core faculty member of Mila Quebec AI Institute, and a research scientist at ServiceNow Research.
@@ -204,18 +221,23 @@ these modalities?
 </div>
 <br>
 
-I am actively looking for highly motivated PhD and MSc (thesis) students.
-For prospective students, here is <a href="prospective-students.html">a list of topics</a> I work on.<br /><br />
 </div>
 
+<h2 class="title">Education</h2>
+<p>Post-doctoral researcher at Stanford University with <a href="https://nlp.stanford.edu/manning/">Chris Manning</a>.<br />
+PhD from University of Edinburgh with <a href="https://homepages.inf.ed.ac.uk/mlap/">Mirella Lapata</a> and <a href="https://homepages.inf.ed.ac.uk/steedman/">Mark Steedman</a>.</p>
 
-<br \>
-<h2 class="title">Postdocs</h2>
+<h2 class="title">Group</h2>
+<p>I am actively looking for highly motivated PhD and MSc (thesis) students.
+For prospective students, here is <a href="prospective-students.html">a list of topics</a> I work on.</p>
+
+<h3 class="title">Postdocs</h3>
+<p>
 <a href="https://mmarius.github.io/">Marius Mosbach</a> (Postdoc Mar 2024) <br \>
 <a href="https://www.vernadankers.com/">Verna Dankers</a> (Postdoc Oct 2025) <br \>
 </p>
 
-<h2 class="title">PhD Students</h2>
+<h3 class="title">PhD Students</h3>
 <p>
 <a href="https://scholar.google.com/citations?user=0qmIfUoAAAAJ&hl=en">Vaibhav Adlakha</a> (Sep 2020) <br \>
 <a href="https://www.aclweb.org/anthology/people/z/zichao-li/">Zichao Li</a> (Sep 2020; co-advised with <a href="https://www.cs.mcgill.ca/~jcheung/">Jackie Cheung</a>) <br \>
@@ -231,7 +253,7 @@ For prospective students, here is <a href="prospective-students.html">a list of 
 <a href="https://tvergara.github.io/">Tomás Vergara Browne</a> (Sep 2025) <br \>
 </p>
 
-<h2 class="title">Masters Students</h2>
+<h3 class="title">Masters Students</h3>
 <p>
 <a href="https://fy-liu.github.io/">Fengyuan Liu</a> (Sep 2025; co-advised with <a href="https://rizar.github.io/">Dzmitry Bahdanau</a>) <br \>
 <a href="https://jaygala24.github.io/">Jay Gala</a> (Sep 2025; co-advised with <a href="https://rizar.github.io/">Dzmitry Bahdanau</a>) <br \>
@@ -239,21 +261,20 @@ For prospective students, here is <a href="prospective-students.html">a list of 
 <a href="https://marzinouri.github.io/">Marzia Nouri</a> (Jan 2026) <br \>
 </p>
 
-<h2 class="title">Undergrads</h2>
+<h3 class="title">Undergrads</h3>
 <p>
 <a href="https://adadtur.github.io/">Ada Tur</a> (May 2024) <br \>
 </p>
 
-
-<h2 class="title">Research Assistants/Interns</h2>
+<h3 class="title">Research Assistants/Interns</h3>
 <p>
 <a href="https://kazemnejad.com/">Amirhossein Kazemnejad</a> (Dec 2023; Graduated with MSc from the group) <br \>
 Charbel El Feghali (Intern Sep 2025) <br \>
 Matteo Boglioni (Intern Oct 2025) <br \>
 </p>
 
-
-<h2 class="title">Alumni</h2>
+<details>
+<summary><h3 class="title" style="display:inline; border:none; cursor:pointer;">Alumni</h3></summary>
 <p>
 <!--<a href="https://kazemnejad.com/">Amirhossein Kazemnejad</a> (MSc Jan 2021 -> Research Assistant at Mila) <br \>-->
 <a href="https://kstanczak.github.io/">Karolina Stańczak</a> (Postdoc Mar 2024--Mar 2025 -> Postdoc at ETH AI Center) <br \>
@@ -280,8 +301,9 @@ Neshma Metri (Cognitive Science Honors Fall 2021) <br \>
 Michelle Yang (Undergrad Fall 2021 -> back to McGill; co-advised with <a href="https://people.linguistics.mcgill.ca/~morgan/">Morgan Sonderegger</a>) <br \>
 <a href="https://emilygoodwin.github.io/">Emily Goodwin</a> (MA -> PhD at Stanford Linguistics; Jan 2020; co-advised with <a href="http://people.linguistics.mcgill.ca/~timothy.odonnell/">Tim O'Donnell</a>) <br \>
 <a href="https://ltorroba.github.io/">Lucas Torroba Hennigen</a> (Intern -> PhD at MIT Computer Science)<br \>
-<a href="https://victorprokhorov.github.io/">Victor Prokhorov</a> (Intern, back to Cambridge University) <br \> 
+<a href="https://victorprokhorov.github.io/">Victor Prokhorov</a> (Intern, back to Cambridge University) <br \>
 </p>
+</details>
 
 <h2 class="title">Service</h2>
 <p>
@@ -302,12 +324,6 @@ Area chair: <a href="http://www.acl2019.org/EN/index.xhtml">ACL 2019</a><br />
 Area chair: <a href="http://www.conll.org/2018">CoNLL 2018</a><br />
 Reviewier: ACL, EMNLP, NAACL, ICML, NeurIPS-->
 </p>
-<h2 class="title">Education</h2>
-<p>Post-doctoral researcher at Stanford University with <a href="https://nlp.stanford.edu/manning/">Chris Manning</a>.<br />
-PhD from University of Edinburgh with <a href="https://homepages.inf.ed.ac.uk/mlap/">Mirella Lapata</a> and <a href="https://homepages.inf.ed.ac.uk/steedman/">Mark Steedman</a>.</p>
-<h2 class="title">Past Industry Experience</h2>
-<p>Internship at <a href="https://research.google.com/teams/nlu/">Google NLU</a><br />
-Engineer at <a href="http://sketchengine.eu">Sketch Engine</a></p>
   </div>
 
   
