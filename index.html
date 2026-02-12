@@ -69,6 +69,7 @@
       h2 { font-size: 13pt !important; }
       h3 { font-size: 12pt !important; }
       iframe { height: 1200px !important; }
+      .theme-cards { grid-template-columns: 1fr !important; }
     }
   </style>
   </head>
@@ -123,6 +124,19 @@ img {
     max-width:16%;
     margin-top: 1%;
 }
+.theme-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.theme-card {
+    border-left: 3px solid #6CA300;
+    background: #f9faf6;
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.92em;
+    line-height: 1.5;
+}
 </style><p>
 <img src="siva2.jpg"  align="right" /></p>
 <p><b>Assistant Professor</b><br />
@@ -139,22 +153,33 @@ I am a recipient of the <a href="https://cscan-infocan.ca/current-year-winners/"
 My research interests are in representation learning for language with a specific focus on reasoning, grounding, conversational modeling, and safety.
 Broadly, my research has four themes:<br><br>
 
-<b>Theme I:</b> How can we represent language so that machines can effectively process and reason upon it? 
+<div class="theme-cards">
+<div class="theme-card">
+<b>Theme I:</b> How can we represent language so that machines can effectively process and reason upon it?
 This quest also involves a scientific pursuit of language: if one representation
 is better than the other, can we gain insights into why the underlying representation is
-better and what it can teach us about linguistic structure? <br><br>
+better and what it can teach us about linguistic structure?
+</div>
 
+<div class="theme-card">
 <b>Theme II:</b> Can we interact with machines the way we interact with people to get tasks
 accomplished, such as having a conversation to seek answers about a topic of interest or
-asking a robot to perform a task? I have been working on methods that improve trustworthiness of these models using retrieval-augmentation<br><br>
+asking a robot to perform a task? I have been working on methods that improve trustworthiness of these models using retrieval-augmentation
+</div>
 
+<div class="theme-card">
 <b>Theme III:</b> Even if we succeed at Themes I and II, it is important to ensure that the
 resulting advances are safe. Additionally, it is important that these advances are available
-in several languages, not just in English.<br><br>
+in several languages, not just in English.
+</div>
 
+<div class="theme-card">
 <b>Theme IV:</b> Language is often situated with rich modalities such as vision and speech, and
 humans thrive in such environments. How can we build language models that integrate
-these modalities?<br><br>
+these modalities?
+</div>
+</div>
+<br>
 
 I am actively looking for highly motivated PhD and MSc (thesis) students.
 For prospective students, here is <a href="prospective-students.html">a list of topics</a> I work on.<br /><br />
