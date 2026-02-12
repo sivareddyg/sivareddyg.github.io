@@ -71,6 +71,11 @@ h2.title {
   padding-top: 0.8em;
   border-top: 1px solid #e8e8e8;
 }
+#header-inner {
+  margin-left: 0;
+  padding-left: 22px;
+  padding-bottom: 0.5em;
+}
 #site-name, #site-name a:link, #site-name a:visited {
   font-weight: 600;
   letter-spacing: -0.02em;

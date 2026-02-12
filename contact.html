@@ -46,6 +46,39 @@
       #navbar li { float: none !important; padding: 5px 10px !important; }
       #navbar li a { padding: 6px 4px; }
     }
+    .contact-card {
+      max-width: 500px;
+      margin-top: 1em;
+    }
+    .contact-item {
+      margin-bottom: 1.5em;
+    }
+    .contact-item h3 {
+      margin-bottom: 0.3em;
+    }
+    .contact-item p {
+      margin-top: 0;
+    }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 1.5em;
+    }
+    .pill {
+      display: inline-block;
+      padding: 6px 16px;
+      border: 1.5px solid #3080CB;
+      border-radius: 20px;
+      color: #3080CB;
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: background 0.2s, color 0.2s;
+    }
+    .pill:hover {
+      background: #3080CB;
+      color: #fff;
+    }
   </style>
   </head>
 <body class="not-front not-logged-in node-type-page no-sidebars page-contact section-contact">
@@ -92,15 +125,25 @@
   
   
   <div class="content">
-    <h3> Mailing Address </h3>
-<p>Siva Reddy,<br />
-Office#: I.05,<br />
-6666 St-Urbain, #200,<br />
-Montreal, QC, H2S 3H1</p>
-<h3> Email </h3>
-<p>siva.reddy@mila.quebec</p>
-<h3> Twitter </h3>
-<p><a href="http://twitter.com/sivareddyg">http://twitter.com/sivareddyg</a></p>
+
+<div class="contact-card">
+  <div class="contact-item">
+    <h3>Email</h3>
+    <p><a href="mailto:siva.reddy@mila.quebec">siva.reddy@mila.quebec</a></p>
+  </div>
+  <div class="contact-item">
+    <h3>Office</h3>
+    <p>Room I.05<br />
+    6666 St-Urbain, #200<br />
+    Montreal, QC, H2S 3H1</p>
+  </div>
+  <div class="contact-links">
+    <a href="https://x.com/sivareddyg" class="pill">X</a>
+    <a href="https://scholar.google.com/citations?user=RJg2ZPIAAAAJ" class="pill">Google Scholar</a>
+    <a href="https://github.com/sivareddyg" class="pill">GitHub</a>
+  </div>
+</div>
+
   </div>
 
   
